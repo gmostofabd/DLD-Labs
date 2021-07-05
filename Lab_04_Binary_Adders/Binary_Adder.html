@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="https://github.com/gmostofabd/melab-store/blob/main/Images/melab-bd_logo.jpg?raw=true" type="image/x-icon">
+  
+    <script src="https://github.com/gmostofabd/melab-store/blob/main/sharedfooter.js" type="text/javascript" defer></script>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+    <script>
+          $(function(){
+              $('#sidebar1').load("assets/sidebar1.html");
+          });
+    </script>
+    
+    <meta charset="utf-8">
+    <meta name="Keywords" content="Microcontroller,8051,Assembly,Programming,Circuits,Codes,Proteus">
+    
+    <!--Facebook Open graph Mete Tags-->
+    <meta property="og:url"                content="https://gmostofabd.github.io/ISEIS/" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="ISEIS" />
+    <meta property="og:description"        content="IOT Smart Egg Incubation System" />
+    <meta property="og:image"              content="assets/images/chamber.jpg" />
+  
+    <title>Binary Adder</title>
+</head>
+
+<body>
+
+  <div class="first_top_cont">
+    <a href="LAB_04_BINARY_ADDERS/Binary_Adder.html">Links</a>
+  </div>
+
+
+  <div class="header_common">
+
+    <div class="second_top_cntr">
+
+
+    </div>  
+   
+  </div>
+
+
+  <div id="topic_container"><h2>Lab 04 - BINARY ADDER OPERATION</h2></div>
+  
+
+  <div class="root_cont">
+    <div class="main_cont">
+
+      
+
+      <div id="slide_cont">
+
+
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="images/slide1.png" >
+            <div class="text">Theory</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="images/slide2.png" >
+            <div class="text">Programming</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="images/slide4.png" >
+            <div class="text">Circuits</div>
+          </div>
+
+          
+          <div class="mySlides fade">
+              <div class="numbertext">4 / 4</div>
+              <img src="images/slide3.png" >
+              <div class="text">Experiment</div>
+          </div>
+
+
+        </div>
+          
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+      </div>   
+      <script src="assets/myScript.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="section">
+        <h3>Introduction</h3>
+            <p>
+              This  paper  shall  describe  the  development  process  of  a  project  which  will devise 
+              a prototype called "ISEIS" also known as IOT Smart Egg Incubation System. It is a device 
+              which simulates an incubator by keeping eggs warm with the appropriate humidity using Arduino 
+              platform for the reason to hatch the eggs.
+              
+              <br><br>The egg hatching incubator machine is equipped with DHT22 (Temperature and humidity) sensor, 
+              Heating elements, humidifier, fans that able to automatically monitor and 2 regulate the inside 
+              environment of the incubator is in the ideal condition to incubate eggs. 
+              The entire system will be controlled using NODEMCU (Arduino control system) as the brain of 
+              the system. The system has a LCD display and user buttons for user customization on site and 
+              an andriod application for the wireless monitoring and control via a remote server (Google Firebase).
+            </p>
+      </div>
+
+
+
+      <div class="section">
+        <h3>OBJECTIVE :</h3>
+          <ul>
+            <li>To understand and implement binary Half Adder and Full Adder circuits.</li>
+            <li>To design and implement a binary adder which will add to binary words (4 bits each) using discrete gates.</li>
+            <li>To design and implement a binary adder which will add to binary words (4 bits each) using IC.</li>
+          </ul>
+
+      </div>
+
+
+      <div class="section">
+        <h3>APPARATUS</h3>
+          <ul>
+            <li>IC Type 7408 Quadruple 2-input AND gates</li>
+            <li>IC Type 7432 Quadruple 2-input OR gates</li>
+            <li>IC Type 7486 Quadruple 2-input XOR gates</li>
+            <li>IC Type 7483 4 bit binary Full Adder</li>
+          </ul>
+      </div>
+
+
+
+      <div class="section">
+        <h3>Brief Theory</h3>
+
+        <h3>Adder</h3>
+
+        <p>
+          Digital computers perform a variety of information-processing tasks. Among the functions
+          encountered are the various arithmetic operations. The most basic arithmetic operation is the
+          addition of two binary digits. Adder circuit is a combinational digital circuit that is used for
+          adding two numbers. A typical adder circuit produces a sum bit (denoted by S) and a carry
+          bit (denoted by C) as the output. Typically, adders are realized for adding binary numbers but
+          they can be also realized for adding other formats like BCD (binary coded decimal), XS-3 etc.
+          Besides addition, adder circuits can be used for a lot of other applications in digital
+          electronics like address decoding, table index calculation etc. Adder circuits are of two types:
+          Half adder and Full adder. <br><br>
+        </p>
+
+      </div>
+
+      <div class="section">
+        <h3>Half Adder</h3>
+        <p>
+          Half adder is a combinational arithmetic circuit that adds two numbers and produces a sum
+          bit (S) and carry bit (C) as the output. If A and B are the input bits, then sum bit (S) is the
+          XOR of A and B and the carry bit (C) will be the AND of A and B.
+          From this it is clear that a half adder circuit can be easily constructed using one XOR gate and
+          one AND gate. <br><br> 
+          
+          Half adder is the simplest of all adder circuits, but it has a major disadvantage,
+          the half adder can add only two input bits (A and B) and has nothing to do with the carry if
+          there is any in the input, so if the input to a half adder have a carry, then it will be neglected
+          and adds only the A and B bits. That means the binary addition process is not complete and
+          that’s why it is called a half adder. The truth table, schematic representation and XOR//AND
+          realization of a half adder are shown in the figure below.          
+        </p>
+
+        <div class="box_90"><img src="images/half_adder_anim.gif" alt="Stepper Motor"></div>
+        <div class="capt_cont">Fig: Half Adder Circuit</div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="section">
+
+
+        <h3>Full Adder</h3>
+        <p>
+          Full Adder is the adder which adds three inputs and produces two outputs. 
+          The first two inputs are A and B and the third input is an input carry as C-IN. 
+          The output carry is designated as C-OUT and the normal output is designated as 
+          S which is SUM. A full adder logic is designed in such a manner that can take 
+          eight inputs together to create a byte-wide adder and cascade the carry bit from 
+          one adder to the another.<br><br> 
+          
+        </p>
+
+
+
+        <div class="box_90"><img src="images/fulladd.png" alt="Stepper Motor"></div>
+        <div class="capt_cont">Fig: Full Adder Circuit</div>
+      
+
+
+
+
+
+
+
+
+        <div class="exercise_section">
+          <h3>Exercises (Lab)</h3>
+            <div class="row">
+      
+              <div class="col">
+                <div class="exercise_section_text">
+                  <ul><h4>Task 1 :</h4>
+                    <li>Design a 1-bit Half Adder circuit using only basic logic gates.</li>
+                  </ul>
+                </div>
+              </div>
+      
+              <div class="col">
+                <img src="assets/images/lab_task_ckt.png" alt="ckt_diagram">
+              </div>
+      
+            </div> 
+          
+            <div class="row">
+      
+              <div class="col">
+                <div class="exercise_section_text">
+                  <ul><h4>Task 2 :</h4>
+                    <li>Design a 1-bit Full Adder circuit using only basic logic gates.</li>
+                  </ul>
+        
+                </div>
+              </div>
+      
+              <div class="col">
+                <img src="assets/images/home_task_ckt.png" alt="ckt_diagram">
+              </div>
+      
+            </div>
+      
+        </div>
+
+
+
+
+
+        <div class="exercise_section">
+          <h3>Exercises (Home)</h3>
+            <div class="row">
+      
+              <div class="col">
+                <div class="exercise_section_text">
+                  <ul><h4>Task 1 :</h4>
+                    <li>Design a 1-bit Half Adder circuit using only basic logic gates.</li>
+                  </ul>
+                </div>
+              </div>
+      
+              <div class="col">
+                <img src="assets/images/lab_task_ckt.png" alt="ckt_diagram">
+              </div>
+      
+            </div> 
+     
+        </div>
+
+ 
+
+        </div>
+        <div class="section">  
+
+          <h3>Circuit Diagram :</h3>
+          
+            <img src="assets/images/circuit.png" alt="ckt_diagram">
+
+            <div id="capt_cont">Fig: ISEIS Circuit Diagram</div>
+
+
+          <h3>Circuit Discussion :</h3>
+            <p>
+            </p>
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="link_cont">
+
+      <div class="vdo_lst_cont">
+        <h3>Lesson Video</h3>
+        <iframe width="186" height="130" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+      </div>
+
+      <div id="sidebar1"></div> 
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+    
+
+</body>
+
+
+</html>
