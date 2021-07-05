@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="https://github.com/gmostofabd/melab-store/blob/main/Images/melab-bd_logo.jpg?raw=true" type="image/x-icon">
+  
+    <script src="https://github.com/gmostofabd/melab-store/blob/main/sharedfooter.js" type="text/javascript" defer></script>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+    <script>
+          $(function(){
+              $('#sidebar1').load("assets/sidebar1.html");
+          });
+    </script>
+    
+    <meta charset="utf-8">
+    <meta name="Keywords" content="Microcontroller,8051,Assembly,Programming,Circuits,Codes,Proteus">
+    
+    <!--Facebook Open graph Mete Tags-->
+    <meta property="og:url"                content="https://gmostofabd.github.io/ISEIS/" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="ISEIS" />
+    <meta property="og:description"        content="IOT Smart Egg Incubation System" />
+    <meta property="og:image"              content="assets/images/chamber.jpg" />
+  
+    <title>DLD Labs</title>
+</head>
+
+<body>
+
+  <div class="first_top_cont">Links</div>
+  <div class="second_top_cont">
+
+    <div class="second_top_cntr">
+
+
+    </div>  
+   
+  </div>
+
+
+  <div id="topic_container"><h2>Digital Logic Design Labs (EEE-4308)</h2></div>
+  
+
+  <div class="root_cont">
+    <div class="main_cont">
+
+      
+      <div class="section">
+        <h3>Introduction</h3>
+            <p>
+              This  paper  shall  describe  the  development  process  of  a  project  which  will devise 
+              a prototype called "ISEIS" also known as IOT Smart Egg Incubation System. It is a device 
+              which simulates an incubator by keeping eggs warm with the appropriate humidity using Arduino 
+              platform for the reason to hatch the eggs.
+              
+              <br><br>The egg hatching incubator machine is equipped with DHT22 (Temperature and humidity) sensor, 
+              Heating elements, humidifier, fans that able to automatically monitor and 2 regulate the inside 
+              environment of the incubator is in the ideal condition to incubate eggs. 
+              The entire system will be controlled using NODEMCU (Arduino control system) as the brain of 
+              the system. The system has a LCD display and user buttons for user customization on site and 
+              an andriod application for the wireless monitoring and control via a remote server (Google Firebase).
+            </p>
+      </div>
+
+
+      <div class="section">
+        <h3>Bread Board</h3>
+
+        <p>
+          Incubator is a device used in various biological process and egg hatching as well. 
+          Using incubator the process of incubation can be speed up and the egg can be incubates 
+          in large quantity of scale. There are many development of egg incubator today with a 
+          controlled temperature, but the controls are usually not fully automated control not 
+          all incubators will produce a good incubation process, contributing to potential loss 
+          of hatching eggs. Thus, I have come out with a design of smart egg incubator using Arduino. 
+          Smart Incubator is designed to reduce abnormal chicks and to reduce the risk of damage eggs 
+          caused by uncertain environment. This system will take 18 to 22 days to hatch eggs by 
+          controlling the Incubation chamber. The system is fully automated system and easy to handle. 
+          The system will control the temperature and the humidity which meet the objective of this 
+          project. The  "ISEIS" involves the integration between hardware and software elements. 
+          It also features a monitoring system that allows the owner to control the incubator’s setting 
+          remotely even from a smart phone; over the internet. The monitoring system is developed 
+          using MIT App Inventor which is very popular tool for android app developments. As for the 
+          hardware part, NodeMCU (An Arduino development proto board) will act as the microcomputer that 
+          can be programmed based on a specific function. <br><br>
+
+          ISEIS will allow the fetuses inside the eggs to grow and hatch without the mother (hens) being 
+          present. This project is developed for the specific reason which is to assist the small, medium 
+          and large-scale  farmers  from  the  technological  perspective,  so  that  their  productivity  
+          can  be  increased  significantly.
+        </p>
+
+
+
+        <div class="box_90"><img src="DLD Lab Intro/images/Bread_Board.png" alt="Stepper Motor"></div>
+        <div class="capt_cont">Fig: Standard Incubator Components</div>
+      
+        <h3>ISEIS Features :</h3>
+        
+          <ul>
+            <li>IOT Based</li>
+            <li>Compatible to different capacity Incubators</li>
+            <li>Two level Heating to ensure quiuck settloing of temperature</li>
+            <li>Humidifier with efficient controlling.</li>
+            <li>Servo motor to turn eggs at a predefined interval.</li>
+            <li>Limit switches to maintain servo positioning</li>
+            <li>LCD display to observe machine conditions and settings</li>
+            <li>Push buttons for user options on Instrument.</li>
+          </ul>
+          <br>
+
+
+          <h3>Materials and Methods</h3>
+          <p>
+            
+          </p>
+
+          <div class="box_90"><img src="assets/images/seis1.png" alt="winding"></div>
+          <div class="capt_cont">Fig: ISEIS Components</div>
+
+
+ 
+
+        </div>
+        <div class="section">  
+
+          <h3>Circuit Diagram :</h3>
+          
+            <img src="assets/images/circuit.png" alt="ckt_diagram">
+
+            <div id="capt_cont">Fig: ISEIS Circuit Diagram</div>
+
+
+          <h3>Circuit Discussion :</h3>
+            <p>
+            </p>
+        </div>
+
+        <div class="section">
+
+          <h3>Assembly Program : stepper_8051.asm</h3>
+            <div class="prog_cont">
+              <embed type="text/html" src="codes/xx"  width="500" height="500">
+            </div>
+  
+          
+
+          <h3>Code Discussion:</h3>
+            <p>
+              The program first clears P1.0 for activating phase 1 (A1) of the stepper motor. 
+              This condition is maintained for 65mS and then P1.0 is set for deactivating phase 1 
+              of the motor. Then the same process is repeated for the port pins P1.1 to P1.3 and 
+              the entire cycle is repeated over and over to make the motor rotate in the clockwise direction.
+
+              Timer 0 of the microcontroller is configured in Mode1 for producing the 65mS delay. 
+              65mS is the width of each control pulse.
+            </p>
+
+        </div>
+
+
+
+
+
+
+    </div>
+    <div class="link_cont">
+
+      <div class="vdo_lst_cont">
+        <h3>Lesson Video</h3>
+        <iframe width="186" height="130" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+      </div>
+
+      <div id="sidebar1"></div> 
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="exercise_section">
+    <h3>Exercises</h3>
+      <div class="row">
+
+        <div class="col">
+          <div class="exercise_section_text">
+            <ul><h4>Lab Task :</h4>
+              <li>Construct a circuit for a CA type SSD using proteus simulator and write
+                  a program for a loop coupnter from 0 to 9 and then A, b,C, d, E, F
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col">
+          <img src="assets/images/lab_task_ckt.png" alt="ckt_diagram">
+        </div>
+
+      </div> 
+    
+      <div class="row">
+
+        <div class="col">
+          <div class="exercise_section_text">
+            <ul><h4>Home Task :</h4>
+              <li>Construct a circuit for two didgit seven segment counter (which will count 0 to 99 decimal) in proteus having
+                  three switches: one for up count, one for down count and last one for reseting the 
+                  counter.
+              </li>
+            </ul>
+  
+          </div>
+        </div>
+
+        <div class="col">
+          <img src="assets/images/home_task_ckt.png" alt="ckt_diagram">
+        </div>
+
+      </div>
+
+  </div>
+
+    
+
+</body>
+
+
+</html>
