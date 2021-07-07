@@ -9,12 +9,12 @@
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     
-    <script>
-          $(function(){
-              $('#sidebar1').load("assets/sidebar1.html");
-          });
-    </script>
+    <script>  $(function(){$('#sidebar1').load("assets/sidebar1.html");});</script>
+    <script>  $(function(){$('#icpin').load("assets/icpin.html");});</script>
     
+
+
+
     <meta charset="utf-8">
     <meta name="Keywords" content="Microcontroller,8051,Assembly,Programming,Circuits,Codes,Proteus">
     
@@ -39,13 +39,8 @@
 
     <div class="second_top_cntr">
 
-      <div class="second_top_col1">
-        <h2>EEE-4308</h2>
-      </div>
-
-      <div class="second_top_col2">
-        <h2>Digital Electronics Experiments</h2>
-      </div>
+      <div class="second_top_col1"> <h2>EEE-4308</h2> </div>
+      <div class="second_top_col2"> <h2>Digital Electronics (Lab Course)</h2> </div>
 
 
       <div class="second_top_col3">
@@ -119,16 +114,14 @@
       <div class="section">
         <h3>Introduction</h3>
             <p>
-              A full adder circuit is central to most digital circuits that perform addition or subtraction. 
-              It is so called because it adds together two binary digits, plus a carry-in digit to produce a 
-              sum and carry-out digit. It therefore has three inputs and two outputs.
-              
-              <br><br>The egg hatching incubator machine is equipped with DHT22 (Temperature and humidity) sensor, 
-              Heating elements, humidifier, fans that able to automatically monitor and 2 regulate the inside 
-              environment of the incubator is in the ideal condition to incubate eggs. 
-              The entire system will be controlled using NODEMCU (Arduino control system) as the brain of 
-              the system. The system has a LCD display and user buttons for user customization on site and 
-              an andriod application for the wireless monitoring and control via a remote server (Google Firebase).
+              In this tutorial, we are going to look at the Binary Adder and Subtractor Circuits. 
+              We will learn about the Half Adder, Full Adder, Parallel Adder (using multiple Full Adders), 
+              Half Subtractor, Full Subtractor and a Parallel Adder / Subtractor combination circuit.<br><br>
+
+              A Binary Adder is a digital circuit that performs the arithmetic sum of two binary numbers 
+              provided with any length. A Binary Adder is constructed using full-adder circuits connected 
+              in series, with the output carry from one full-adder connected to the input carry of the 
+              next full-adder. <br>
             </p>
       </div>
 
@@ -166,8 +159,6 @@
       <div class="section">
         <h3>Brief Theory</h3>
 
-        <h3>Adder</h3>
-
         <p>
           Digital computers perform a variety of information-processing tasks. Among the functions
           encountered are the various arithmetic operations. The most basic arithmetic operation is the
@@ -176,9 +167,30 @@
           bit (denoted by C) as the output. Typically, adders are realized for adding binary numbers but
           they can be also realized for adding other formats like BCD (binary coded decimal), XS-3 etc.
           Besides addition, adder circuits can be used for a lot of other applications in digital
-          electronics like address decoding, table index calculation etc. Adder circuits are of two types:
-          Half adder and Full adder. <br><br>
+          electronics like address decoding, table index calculation etc. 
         </p>
+
+        <div class="box_50"><img src="images/Simple-Binary-Addition.jpg" alt="Stepper Motor"></div>
+        <div class="capt_cont">Fig: Simple Binary Addition</div>
+
+        <p>
+          In the first three operations, each binary addition gives sum as one bit , i.e., either 0 or 1. 
+          But for the fourth addition operation (where the inputs are 1 and 1), the result consists of 
+          two binary digits. Here, the lower significant bit is called as the ‘Sum Bit’, while the higher 
+          significant bit is called as the ‘Carry Bit’. <br><br>
+  
+          For single bit additions, there may not be an issue. The problem may arise when we try to add 
+          binary numbers with more than one bit. <br><br>
+          
+          Depending on how they handle the output of the ‘1+1’ addition, they are divided into:
+          Half Adder & Full Adder.
+        </p>
+
+
+
+
+
+
 
       </div>
 
@@ -206,7 +218,7 @@
           there is any in the input, so if the input to a half adder have a carry, then it will be neglected
           and adds only the A and B bits. That means the binary addition process is not complete and
           that’s why it is called a half adder. The truth table, schematic representation and XOR//AND
-          realization of a half adder are shown in the figure below.          
+          realization of a half adder are shown in the figure above.          
         </p>
 
       </div>
@@ -230,7 +242,7 @@
           
         </p>
 
-        <div class="box_90"><img src="images/fulladd.png" alt="Stepper Motor"></div>
+        <div class="box_70"><img src="images/fulladd.png" alt="Stepper Motor"></div>
         <div class="capt_cont">Fig: Full Adder Circuit</div>
 
         <div class="box_50"><img src="images/fatruthtable.png" alt="Stepper Motor"></div>
@@ -243,17 +255,32 @@
 
         <div class="section">  
 
-          <h3>Circuit Diagram :</h3>
-          <div class="box_90"><img src="images/adder_ckt.png" alt="4 bit Adder Ckt"></div>
-          <div id="capt_cont">Fig: A 4 bit Adder Simulation in Proteus</div>
+          <h3>Parallel Adder</h3>
+          <p>
+            As we discussed, a single Full Adder performs the addition of two one bit numbers and 
+            also the carry input. For performing the addition of binary numbers with more than 
+            one bit, more than one full adder is required and the number of Full Adders depends 
+            on the number bits. Thus, a Parallel Adder, is a combination of Multiple Full Adders 
+            and is used for adding all bits of the two numbers simultaneously. <br><br>
+
+            The following figure shows a Parallel 4-bit Binary Adder, which has three full adders 
+            and one half adder. The two binary numbers to be added are  ‘A3 A2 A1 A0‘  and  
+            ‘B3 B2 B1 B0‘ , which are applied to the corresponding inputs of the Full Adders. 
+            This parallel adder produces their result as  ‘C4 S3 S2 S1 S0‘ , 
+            where C4 is the final carry. <br><br>
+          </p>
+
+          <div class="box_70"><img src="images/4-bit-adder.jpg" alt="4 bit Adder Ckt"></div>
+          <div class="capt_cont">Fig: A 4 bit Adder Simulation in Proteus</div>
+
+          <p>
+            Commonly, the Full Adders are designed in dual in-line package integrated circuits. 
+            74LS283 is a popular 4-bit full adder IC. Arithmetic and Logic Unit or ALU of an unit 
+            computer consist of these parallel adders to perform the addition of binary numbers.
+          </p>
 
 
-          <h3>Circuit Discussion :</h3>
-            <p>
-            </p>
         </div>
-
-
 
     </div>
 
@@ -283,13 +310,12 @@
           <div class="exercise_section_text">
             <ul><h4>Task 1 :</h4>
               <li>Design a 1-bit Half Adder circuit using only basic logic gates.</li>
+              <li>Simulate the circuit on Proteus then implement the hardware on breadboard options.</li>
             </ul>
           </div>
         </div>
 
-        <div class="col">
-          <img src="assets/images/lab_task_ckt.png" alt="ckt_diagram">
-        </div>
+        <div class="col"> <img src="images/half_adder_anim.gif" alt="ckt_diagram"> </div>
 
       </div> 
     
@@ -299,16 +325,45 @@
           <div class="exercise_section_text">
             <ul><h4>Task 2 :</h4>
               <li>Design a 1-bit Full Adder circuit using only basic logic gates.</li>
+              <li>Simulate the circuit on Proteus then implement the hardware on breadboard options.</li>
             </ul>
   
           </div>
         </div>
 
         <div class="col">
-          <img src="assets/images/home_task_ckt.png" alt="ckt_diagram">
+          <img src="images/subtract_ckt.png" alt="ckt_diagram">
         </div>
 
       </div>
+
+
+
+      <div class="row">
+
+        <div class="col">
+          <div class="exercise_section_text">
+            <ul><h4>Task 3 :</h4>
+              <li>Design a 4-bit Full Adder circuit using a 4 bit Adder IC like 7483 or 74283</li>
+              <li>Simulate the circuit on Proteus then implement the hardware on breadboard options.</li>
+            </ul>
+  
+          </div>
+        </div>
+
+        <div class="col">
+          <img src="images/adder_ckt.png" alt="ckt_diagram">
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
 
   </div>
 
@@ -347,12 +402,15 @@
         </div>
 
         <div class="col">
-          <img src="assets/images/lab_task_ckt.png" alt="ckt_diagram">
+          <img src="images/8bit_adder.png" alt="ckt_diagram">
         </div>
 
       </div> 
 
   </div>
+
+  
+
 
   <div class="tips_section">
     <h3>74 Series IC Pin Diagram</h3>
@@ -364,6 +422,9 @@
     <div class="tips_sub_section"> <img src="images/7486.png" alt="7486"> </div>
     <div class="tips_sub_section"> <img src="images/74283.png" alt="74283"> </div>
   </div>
+
+
+
 
 </body>
 
