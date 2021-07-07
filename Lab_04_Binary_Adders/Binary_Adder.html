@@ -38,18 +38,25 @@
   <div class="header_common">
 
     <div class="second_top_cntr">
-      <div class="second_top_col1">
 
+      <div class="second_top_col1">
+        <h2>EEE-4308</h2>
+      </div>
+
+      <div class="second_top_col2">
+        <h2>Digital Electronics Experiments</h2>
+      </div>
+
+
+      <div class="second_top_col3">
         <ul>
           <li>Proteus</li>
-          <li>Proteus</li>
-          <li>Proteus</li>
+          <li>Tinkercad</li>
+          <li>Hardware</li>
         </ul>
-
-
-
-
       </div>
+
+
 
     </div>  
    
@@ -77,13 +84,13 @@
           
           <div class="mySlides fade">
             <div class="numbertext">2 / 4</div>
-            <img src="images/slide2.png" >
+            <img src="images/adder_ckt1.png" >
             <div class="text">Programming</div>
           </div>
           
           <div class="mySlides fade">
             <div class="numbertext">3 / 4</div>
-            <img src="images/slide4.png" >
+            <img src="images/half_adder_anim.gif" >
             <div class="text">Circuits</div>
           </div>
 
@@ -112,10 +119,9 @@
       <div class="section">
         <h3>Introduction</h3>
             <p>
-              This  paper  shall  describe  the  development  process  of  a  project  which  will devise 
-              a prototype called "ISEIS" also known as IOT Smart Egg Incubation System. It is a device 
-              which simulates an incubator by keeping eggs warm with the appropriate humidity using Arduino 
-              platform for the reason to hatch the eggs.
+              A full adder circuit is central to most digital circuits that perform addition or subtraction. 
+              It is so called because it adds together two binary digits, plus a carry-in digit to produce a 
+              sum and carry-out digit. It therefore has three inputs and two outputs.
               
               <br><br>The egg hatching incubator machine is equipped with DHT22 (Temperature and humidity) sensor, 
               Heating elements, humidifier, fans that able to automatically monitor and 2 regulate the inside 
@@ -132,7 +138,6 @@
         <h3>OBJECTIVE :</h3>
           <ul>
             <li>To understand and implement binary Half Adder and Full Adder circuits.</li>
-            <li>To design and implement a binary adder which will add to binary words (4 bits each) using discrete gates.</li>
             <li>To design and implement a binary adder which will add to binary words (4 bits each) using IC.</li>
           </ul>
 
@@ -141,11 +146,18 @@
 
       <div class="section">
         <h3>APPARATUS</h3>
-          <ul>
-            <li>IC Type 7408 Quadruple 2-input AND gates</li>
-            <li>IC Type 7432 Quadruple 2-input OR gates</li>
-            <li>IC Type 7486 Quadruple 2-input XOR gates</li>
-            <li>IC Type 7483 4 bit binary Full Adder</li>
+        <div class="box_90"><img src="images/apparatus.png" alt="Stepper Motor"></div>
+        <div class="capt_cont">Fig: Common apparatus for DLD Labs</div>
+ 
+ 
+ 
+        <ul>
+            <li>Digital Trainer</li>
+            <li>IC's (7400, 7402, 7404, 7408, 7432, 7486)</li>
+            <li>Jumper Wire (M2M or as required)</li>
+            <li>Power Supply, Bread Board, Switches, Resistors, LEDs (When Digital Trainer Board is unavailable)</li>
+            <li>Multimeter (Trouble Shoot purposes)</li>
+
           </ul>
       </div>
 
@@ -177,7 +189,11 @@
           bit (S) and carry bit (C) as the output. If A and B are the input bits, then sum bit (S) is the
           XOR of A and B and the carry bit (C) will be the AND of A and B.
           From this it is clear that a half adder circuit can be easily constructed using one XOR gate and
-          one AND gate. <br><br> 
+          one AND gate. <br><br>
+          
+          Logical Expression : <br><br>
+          Sum = A XOR B <br><br>
+          Carry = A AND B 
           
         </p>
 
@@ -207,11 +223,20 @@
           S which is SUM. A full adder logic is designed in such a manner that can take 
           eight inputs together to create a byte-wide adder and cascade the carry bit from 
           one adder to the another.<br><br> 
+
+          Logical Expression : <br><br>
+          SUM = (A XOR B) XOR Cin = (A ⊕ B) ⊕ Cin <br><br>
+          CARRY-OUT = A AND B OR Cin(A XOR B) = A.B + Cin(A ⊕ B) 
           
         </p>
 
         <div class="box_90"><img src="images/fulladd.png" alt="Stepper Motor"></div>
         <div class="capt_cont">Fig: Full Adder Circuit</div>
+
+        <div class="box_50"><img src="images/fatruthtable.png" alt="Stepper Motor"></div>
+        <div class="capt_cont">Fig: Full Adder Truth Table</div>
+
+
       </div>
 
 
@@ -220,9 +245,9 @@
 
           <h3>Circuit Diagram :</h3>
           
-            <img src="assets/images/circuit.png" alt="ckt_diagram">
+            <img src="images/adder_ckt.png" alt="ckt_diagram">
 
-            <div id="capt_cont">Fig: ISEIS Circuit Diagram</div>
+            <div id="capt_cont">Fig: A 4 bit Adder Simulation in Proteus</div>
 
 
           <h3>Circuit Discussion :</h3>
@@ -297,8 +322,29 @@
         <div class="col">
           <div class="exercise_section_text">
             <ul><h4>Task 1 :</h4>
-              <li>Design a 1-bit Half Adder circuit using only basic logic gates.</li>
+              <li>Design a circuit which receives 2(two) 16-bit binary numbers A=a15 ……a0, B= b15 ……b0 
+                and adds them. You cannot use any adder ICs (e.g. 4, 8, 16 bit adders), only can use 
+                basic gate ICs (e.g. AND, OR, XOR, NOR, NAND, NOT). You design should contain
+              </li>
+
+
+              <li>
+                <ul> Steps:
+                  <li>
+                    IC diagram with pin numbers showing the interconnection between different ICs.
+                  </li>
+                  <li>
+                    A succinct description giving a coherent justification of the different parts of the design.
+                  </li>
+                </ul>
+                               
+              </li>
             </ul>
+
+            <p>
+              Hint: A 4 bit adder circuit can be created cascading 4 1-bit full adder circuits constructed 
+              only using basic gates (refer to Task 2).
+            </p>
           </div>
         </div>
 
@@ -310,7 +356,40 @@
 
   </div>
 
+
+
+
+  <div class="tips_section">
+    <h3>74 Series IC Pin Diagram</h3>
+
+    <div class="tips_sub_section">
+      <img src="images/7400.png" alt="ckt_diagram">
+    </div>
+
+    <div class="tips_sub_section">
+      <img src="images/7402.png" alt="ckt_diagram">
+    </div>
+
+    <div class="tips_sub_section">
+      <img src="images/7404.png" alt="ckt_diagram">
+    </div>
     
+    <div class="tips_sub_section">
+      <img src="images/7408.png" alt="ckt_diagram">
+    </div>
+
+    <div class="tips_sub_section">
+      <img src="images/7432.png" alt="ckt_diagram">
+    </div>
+
+    <div class="tips_sub_section">
+      <img src="images/7486.png" alt="ckt_diagram">
+    </div>
+
+  </div>
+
+
+
 
 </body>
 
