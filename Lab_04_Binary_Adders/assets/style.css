@@ -52,6 +52,14 @@ li{margin: 10px 0;}
   background-color:#c0bebc;
 }
 
+.header_common h2{
+  margin: 0px; padding: auto;
+  font-size: 200%;
+  flex-wrap: 23px ;
+  color: rgb(255, 255, 255);
+}
+
+
 .second_top_cntr{
   width:958px; height:118px; 
   margin-left: auto ; margin-right: auto ;
@@ -72,7 +80,7 @@ li{margin: 10px 0;}
   width:640px; height:117px; 
   float: left;
   text-align: center;
-  padding: 20px;
+  padding-top: 40px;
   border-radius: 5px; 
   border: 1px solid #ffffff;
 }
