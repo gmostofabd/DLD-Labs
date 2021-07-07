@@ -1,6 +1,7 @@
 body{align-items: center;  background-color: white;}
 
-h2{ margin: 0px; padding: auto;
+h2{ 
+  margin: 0px; padding: auto;
   font-size: 200%;
   flex-wrap: 23px ;
   color: blueviolet;
@@ -42,6 +43,7 @@ li{margin: 10px 0;}
   background-color:#ffffff;
 }
 
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 .header_common{
   width: 100vw;
@@ -52,47 +54,43 @@ li{margin: 10px 0;}
   background-color:#c0bebc;
 }
 
-.header_common h2{
-  margin: 0px; padding: auto;
-  font-size: 200%;
-  flex-wrap: 23px ;
-  color: rgb(255, 255, 255);
-}
+    .header_common h2{
+      margin: 0px; padding: auto;
+      font-family: sans-serif;
+      font-size: 200%;
+      flex-wrap: 23px ;
+      color: rgb(27, 26, 26);
+    }
 
+    .second_top_cntr{
+      width:960px; height:118px; 
+      margin-left: auto ; margin-right: auto ;
+      border-radius: 5px; 
+    }
 
-.second_top_cntr{
-  width:958px; height:118px; 
-  margin-left: auto ; margin-right: auto ;
-  border-radius: 5px; 
-  border: 1px solid #ffffff;
-}
+    .second_top_col1{
+      width:158px; height:auto; 
+      float: left;
+      padding-top: 40px;
+      text-align: center;
+      border-radius: 5px; 
+      background-color:#969792;
+    }
 
-.second_top_col1{
-  width:158px; height:117px; 
-  float: left;
-  padding-top: 40px;
-  text-align: center;
-  border-radius: 5px; 
-  border: 1px solid #ffffff;
-}
+    .second_top_col2{
+      width:640px; height:117px; 
+      float: left;
+      text-align: center;
+      padding-top: 40px;
+    }
 
-.second_top_col2{
-  width:640px; height:117px; 
-  float: left;
-  text-align: center;
-  padding-top: 40px;
-  border-radius: 5px; 
-  border: 1px solid #ffffff;
-}
+    .second_top_col3{
+      width:158px; height:117px; 
+      float: left;
+      text-align: center;
+    }
 
-.second_top_col3{
-  width:158px; height:117px; 
-  float: left;
-  text-align: center;
-  border-radius: 5px; 
-  border: 1px solid #ffffff;
-}
-
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
 
@@ -435,4 +433,16 @@ li{margin: 10px 0;}
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.icpin_section{
+  width: 960px; height: auto;
+  margin: 20px auto;
+  padding: 20px 0;
+  position: relative;
+  background-color: rgb(236, 229, 229);
+  border-radius: 5px;
+}
 
