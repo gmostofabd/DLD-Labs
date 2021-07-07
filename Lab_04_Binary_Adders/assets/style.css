@@ -53,20 +53,37 @@ li{margin: 10px 0;}
 }
 
 .second_top_cntr{
-  width:958px; height:98px; 
+  width:958px; height:118px; 
   margin-left: auto ; margin-right: auto ;
   border-radius: 5px; 
   border: 1px solid #ffffff;
 }
 
 .second_top_col1{
-  width:158px; height:98px; 
+  width:158px; height:117px; 
   float: left;
+  padding-top: 40px;
+  text-align: center;
   border-radius: 5px; 
   border: 1px solid #ffffff;
 }
 
+.second_top_col2{
+  width:640px; height:117px; 
+  float: left;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px; 
+  border: 1px solid #ffffff;
+}
 
+.second_top_col3{
+  width:158px; height:117px; 
+  float: left;
+  text-align: center;
+  border-radius: 5px; 
+  border: 1px solid #ffffff;
+}
 
 
 
@@ -314,12 +331,13 @@ li{margin: 10px 0;}
     
     /* Slideshow container */
 .slideshow-container {
-      max-width: 880px;
+      max-width: 700px;
+      height: 390px;
       position: relative;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 20px;
-      background-color: rgb(223, 247, 197);
+      margin-bottom: 10px;
+      background-color: rgb(255, 255, 255);
   }
     
     /* Caption text */
@@ -367,3 +385,46 @@ li{margin: 10px 0;}
     @keyframes fade {from {opacity: .3} to {opacity: 1} }
     /* On smaller screens, decrease text size */
     @media only screen and (max-width: 350px) {.text {font-size: 11px} }
+
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.tips_section{
+  width: 960px; height: auto;
+  margin: 20px auto;
+  padding: 20px 0;
+  position: relative;
+  background-color: rgb(236, 229, 229);
+  border-radius: 5px;
+}
+
+.tips_sub_section{
+  width: 320px; height: auto;
+  float: left;
+  background-color: rgb(236, 229, 229);
+  border-radius: 5px;
+}
+
+.tips_section img{
+  width: 280px;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0px 8px 10px 0px #000;
+}
+
+.tips_section h3{
+  width: auto;
+  font-family: sans-serif;
+  margin: 0;
+  font-size: 160%;
+  text-align: center;
+  color: rgb(95, 86, 93);
+  background-color: rgb(211, 201, 112);
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
