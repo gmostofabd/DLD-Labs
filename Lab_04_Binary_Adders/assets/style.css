@@ -72,9 +72,9 @@ li{margin: 10px 0;}
       width:158px; height:auto; 
       float: left;
       padding-top: 40px;
+      padding-bottom: 10px;
       text-align: center;
-      border-radius: 5px; 
-      background-color:#969792;
+      background-color:#ecb16e;
     }
 
     .second_top_col2{
@@ -401,7 +401,6 @@ li{margin: 10px 0;}
   width: 960px; height: auto;
   margin: 20px auto;
   padding: 20px 0;
-  position: relative;
   background-color: rgb(236, 229, 229);
   border-radius: 5px;
 }
@@ -435,6 +434,62 @@ li{margin: 10px 0;}
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.tricks_section{
+  width: 960px; height: auto;
+  margin: 20px auto;
+  padding: 20px 0;
+  background-color: rgb(255, 151, 151);
+  border-radius: 5px;
+}
+
+.tricks_sub_section{
+  width: 480px; height: auto;
+  float: left;
+  background-color: rgb(255, 244, 244);
+  border-radius: 5px;
+}
+
+.tricks_section img{
+  width: 440px;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0px 8px 10px 0px #000;
+}
+
+.tricks_section h3{
+  width: auto;
+  font-family: sans-serif;
+  margin: 0;
+  font-size: 200%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(230, 141, 163);
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 .icpin_section{
@@ -446,3 +501,13 @@ li{margin: 10px 0;}
   border-radius: 5px;
 }
 
+
+
+.blank_container{
+  width:960px; height:650px;
+  margin-top: 10px; 
+  margin-left: auto;
+  margin-right: auto; 
+  border-radius: 10px;
+  border: 1px solid #73AD21;
+}
