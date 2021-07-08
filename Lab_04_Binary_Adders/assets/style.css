@@ -260,7 +260,7 @@ li{margin: 10px 0;}
   width: 960px; height: auto;
   margin: 20px auto;
   padding: 20px 0;
-  background-color: rgb(236, 229, 229);
+  background-color: rgb(255, 255, 255);
   border-radius: 5px;
 }
 
@@ -307,7 +307,7 @@ li{margin: 10px 0;}
 
 .exercise_section ul li ul li{
   font-size: 20px;
-  color: #5e6455;
+  color: #4c5243;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -479,15 +479,49 @@ li{margin: 10px 0;}
 
 
 
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
+.simulation_section{
+  width: 960px; height: auto;
+  margin: 20px auto;
+  padding: 20px 0;
+  background-color: rgb(255, 226, 226);
+  border-radius: 5px;
+}
 
+.simulation_sub_section{
+  width: 460px; height: auto;
+  float: left;
+  background-color: rgb(255, 244, 244);
+  border-radius: 5px;
+}
 
+.simulation_section img{
+  width: 260px;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0px 8px 10px 0px #000;
+}
 
+.simulation_section h3{
+  width: auto;
+  font-family: sans-serif;
+  margin: 0;
+  font-size: 200%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(230, 141, 163);
+}
 
+.simulation_section_text{
+  width: 650px;
+  height: auto;
+  padding: 0 10px;
+}
 
-
-
-
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -500,8 +534,6 @@ li{margin: 10px 0;}
   background-color: rgb(236, 229, 229);
   border-radius: 5px;
 }
-
-
 
 .blank_container{
   width:960px; height:650px;
