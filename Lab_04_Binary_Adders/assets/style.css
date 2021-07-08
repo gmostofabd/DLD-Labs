@@ -92,9 +92,6 @@ li{margin: 10px 0;}
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-
-
-
 #topic_container{
   width:948px; height:auto;
   margin-top: 10px; 
@@ -129,8 +126,6 @@ li{margin: 10px 0;}
   border-radius: 5px;
   background-color:rgb(231, 231, 231);
 }
-
-
 
 .link_cont{
   width: 200px; height: auto;
@@ -425,7 +420,7 @@ li{margin: 10px 0;}
   width: auto;
   font-family: sans-serif;
   margin: 0;
-  font-size: 160%;
+  font-size: 200%;
   text-align: center;
   color: rgb(95, 86, 93);
   background-color: rgb(211, 201, 112);
@@ -440,7 +435,7 @@ li{margin: 10px 0;}
 
 .tricks_section{
   width: 960px; height: auto;
-  margin: 20px auto;
+  margin: 50px auto;
   padding: 20px 0;
   background-color: rgb(255, 151, 151);
   border-radius: 5px;
@@ -477,13 +472,11 @@ li{margin: 10px 0;}
 
 
 
-
-
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 .simulation_section{
   width: 960px; height: auto;
-  margin: 20px auto;
+  margin: 50px auto;
   padding: 20px 0;
   background-color: rgb(255, 226, 226);
   border-radius: 5px;
@@ -523,7 +516,6 @@ li{margin: 10px 0;}
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 .icpin_section{
@@ -534,6 +526,8 @@ li{margin: 10px 0;}
   background-color: rgb(236, 229, 229);
   border-radius: 5px;
 }
+
+
 
 .blank_container{
   width:960px; height:650px;
