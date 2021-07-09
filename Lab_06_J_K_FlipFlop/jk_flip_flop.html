@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content=   "width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="https://github.com/gmostofabd/melab-store/blob/main/Images/melab-bd_logo.jpg?raw=true" type="image/x-icon">
+  
+    <script src="https://github.com/gmostofabd/melab-store/blob/main/sharedfooter.js" type="text/javascript" defer></script>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+    <script>  $(function(){$('#sidebar1').load("assets/sidebar1.html");});</script>
+    <script>  $(function(){$('#icpin').load("assets/icpin.html");});</script>
+    
+
+
+
+    <meta name="Keywords" content="Microcontroller,8051,Assembly,Programming,Circuits,Codes,Proteus">
+    
+    <!--Facebook Open graph Mete Tags-->
+    <meta property="og:url"                content="https://github.com/gmostofabd/DLD-Labs/blob/main/Lab_01_Basic_Gates/Lab_01.html" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="Lab-04 : Binary Adder Operation" />
+    <meta property="og:description"        content="Circuit Simulation and Implementation" />
+    <meta property="og:image"              content="images/half_adder_anim.gif" />
+  
+    <title>J K Flip Flop</title>
+</head>
+
+<body>
+
+  <div class="first_top_cont">
+    <a href="LAB_04_BINARY_ADDERS/Binary_Adder.html">Links</a>
+  </div>
+
+
+  <div class="header_common">
+
+    <div class="second_top_cntr">
+
+      <div class="second_top_col1"> <h2>EEE-4308</h2> </div>
+      <div class="second_top_col2"> <h2>Digital Electronics (Lab Course)</h2> </div>
+
+
+      <div class="second_top_col3">
+        <ul>
+          <li>Proteus</li>
+          <li>Tinkercad</li>
+          <li>Hardware</li>
+        </ul>
+      </div>
+
+
+
+    </div>  
+   
+  </div>
+
+
+  <div id="topic_container"><h2>Lab 06 - Operation of Sequentialp Logic Circuits: The JK Flip-Flop.</h2></div>
+  
+
+  <div class="root_cont">
+    <div class="main_cont">
+
+      
+
+      <div id="slide_cont">
+
+
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="images/half_adder_anim.gif" >
+            <div class="text">Theory</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="images/adder_proteus2.png" >
+            <div class="text">Simulation</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="images/slide4.png" >
+            <div class="text">Virtual</div>
+          </div>
+
+          
+          <div class="mySlides fade">
+              <div class="numbertext">4 / 4</div>
+              <img src="images/slide3.png" >
+              <div class="text">Hardware</div>
+          </div>
+
+
+        </div>
+          
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+      </div>   
+      <script src="assets/myScript.js"></script>
+
+
+
+
+      <div class="section">
+        <h3>Introduction</h3>
+            <p>
+              The combinational circuit does not use any memory. Hence the previous state of input 
+              does not have any effect on the present state of the circuit. But sequential circuit 
+              has memory so output can vary based on input. This type of circuits uses previous 
+              input, output, clock and a memory element.<br><br>
+              
+              In this tutorial we will implement a sequential logic circuit called J K Flip Flop.
+            </p>
+      </div>
+
+
+
+      <div class="section">
+        <h3>OBJECTIVE :</h3>
+          <ul>
+            <li>To understand and implement JK Flip-Flop using universal gates.</li>
+            <li>To design and implement a Master-Slave JK Flip-Flop using JK Flip-Flop IC.</li>
+          </ul>
+
+      </div>
+
+
+      <div class="section">
+        <h3>APPARATUS</h3>
+        <div class="box_90"><img src="images/apparatus.png" alt="Stepper Motor"></div>
+        <div class="capt_cont">Fig: Common apparatus for DLD Labs</div>
+ 
+ 
+ 
+        <ul>
+            <li>Digital Trainer</li>
+            <li>IC's (7400, 7410, 7476)</li>
+            <li>Jumper Wire (M2M or as required)</li>
+            <li>Power Supply, Bread Board, Switches, Resistors, LEDs (When Digital Trainer Board is unavailable)</li>
+            <li>Multimeter (Trouble Shoot purposes)</li>
+
+          </ul>
+      </div>
+
+
+
+      <div class="section">
+        <h3>Brief Theory</h3>
+
+        <p>
+          Unlike Combinational Logic circuits that change state depending upon the actual signals 
+          being applied to their inputs at that time, Sequential Logic circuits have some form of 
+          inherent “Memory” built in.<br><br>
+
+          This means that sequential logic circuits are able to take into account their previous 
+          input state as well as those actually present, a sort of “before” and “after” effect is 
+          involved with sequential circuits.<br><br>
+
+          In other words, the output state of a “sequential logic circuit” is a function of the 
+          following three states, the “present input”, the “past input” and/or the “past output”. 
+          Sequential Logic circuits remember these conditions and stay fixed in their current 
+          state until the next clock signal changes one of the states, giving sequential 
+          logic circuits “Memory”. <br><br>
+
+          Sequential logic circuits are generally termed as two state or Bistable devices which 
+          can have their output or outputs set in one of two basic states, a logic level “1” or 
+          a logic level “0” and will remain “latched” (hence the name latch) indefinitely in 
+          this current state or condition until some other input trigger pulse or signal is 
+          applied which will cause the bistable to change its state once again.
+
+          
+        </p>
+
+        <h4>Sequential Logic Representation</h4>
+
+        <div class="box_50"><img src="images/seq4.gif" alt="seq_ckt"></div>
+
+        <p>
+          The word “Sequential” means that things happen in a “sequence”, one after another 
+          and in Sequential Logic circuits, the actual clock signal determines when things 
+          will happen next. Simple sequential logic circuits can be constructed from standard 
+          Bistable circuits such as: Flip-flops, Latches and Counters and which themselves 
+          can be made by simply connecting together universal NAND Gates and/or NOR Gates 
+          in a particular combinational way to produce the required sequential circuit.
+        </p>
+
+
+        <h3>Classification of Sequential Logic</h3>
+
+        <div class="box_50"><img src="images/sequential-seq3.gif" alt="seqtype"></div>
+
+
+        <p>
+          As well as the two logic states mentioned above logic level “1” and logic level “0”, 
+          a third element is introduced that separates sequential logic circuits from their 
+          combinational logic counterparts, namely TIME. Sequential logic circuits return back 
+          to their original steady state once reset and sequential circuits with loops or 
+          feedback paths are said to be “cyclic” in nature. <br><br>
+
+          We now know that in sequential circuits changes occur only on the application of a 
+          clock signal making it synchronous, otherwise the circuit is asynchronous and depends 
+          upon an external input. To retain their current state, sequential circuits rely on 
+          feedback and this occurs when a fraction of the output is fed back to the input and 
+          this is demonstrated as:
+        </p>
+
+        <h3>Sequential Feedback Loop</h3>
+
+        <div class="box_70"><img src="images/sequential-seq31.gif" alt="feedback"></div>
+
+
+        <p>
+          The two inverters or NOT gates are connected in series with the output at Q fed 
+          back to the input. Unfortunately, this configuration never changes state because 
+          the output will always be the same, either a “1” or a “0”, it is permanently set. 
+          However, we can see how feedback works by examining the most basic sequential 
+          logic components, called the SR flip-flop. <br><br>
+
+          The basic S-R NAND flip-flop circuit has many advantages and uses in sequential 
+          logic circuits but it suffers from two basic switching problems. <br><br>
+
+          1. the Set = 0 and Reset = 0 condition (S = R = 0) must always be avoided <br><br>
+          2. if Set or Reset change state while the enable (EN) input is high the 
+          correct latching action may not occur <br><br>
+
+          Then to overcome these two fundamental design problems with the SR flip-flop design, 
+          the JK flip Flop was developed.
+        </p>
+
+
+
+
+
+      </div>
+
+      <div class="section">
+        <h3>J K Flip Flop</h3>
+        <p>
+          This simple JK flip Flop is the most widely used of all the flip-flop designs and is 
+          considered to be a universal flip-flop circuit. The two inputs labelled “J” and “K” 
+          are not shortened abbreviated letters of other words, such as “S” for Set and “R” 
+          for Reset, but are themselves autonomous letters chosen by its inventor Jack Kilby 
+          to distinguish the flip-flop design from other types.<br><br>
+
+          The sequential operation of the JK flip flop is exactly the same as for the previous 
+          SR flip-flop with the same “Set” and “Reset” inputs. The difference this time is that 
+          the “JK flip flop” has no invalid or forbidden input states of the SR Latch even when 
+          S and R are both at logic “1”.<br><br>
+
+          The JK flip flop is basically a gated SR flip-flop with the addition of a clock input 
+          circuitry that prevents the illegal or invalid output condition that can occur when 
+          both inputs S and R are equal to logic level “1”. Due to this additional clocked 
+          input, a JK flip-flop has four possible input combinations, “logic 1”, “logic 0”, 
+          “no change” and “toggle”. The symbol for a JK flip flop is similar to that of an 
+          SR Bistable Latch as seen in the previous tutorial except for the addition of a 
+          clock input.<br><br>
+   
+        </p>
+
+
+        <h3>The Basic JK Flip-flop</h3>
+
+
+        <div class="box_90"><img src="images/sequential-seq13.gif" alt="jkff"></div>
+
+        <p>
+          Both the S and the R inputs of the previous SR bistable have now been replaced by two 
+          inputs called the J and K inputs, respectively after its inventor Jack Kilby. Then 
+          this equates to: J = S and K = R. <br><br>
+
+          The two 2-input AND gates of the gated SR bistable have now been replaced by two 
+          3-input NAND gates with the third input of each gate connected to the outputs at 
+          Q and Q. This cross coupling of the SR flip-flop allows the previously invalid 
+          condition of S = “1” and R = “1” state to be used to produce a “toggle action” 
+          as the two inputs are now interlocked. <br><br>
+
+          If the circuit is now “SET” the J input is inhibited by the “0” status of Q through 
+          the lower NAND gate. If the circuit is “RESET” the K input is inhibited by the “0” 
+          status of Q through the upper NAND gate. As Q and Q are always different we can use 
+          them to control the input. When both inputs J and K are equal to logic “1”, the JK 
+          flip flop toggles as shown in the following truth table. <br><br>       
+        </p>
+
+        <h3>The Truth Table for the JK Function</h3>
+
+        <div class="box_70"><img src="images/jk_truth_table.png" alt="jk_tt"></div>
+        
+
+        <p>
+          Then the JK flip-flop is basically an SR flip flop with feedback which enables only 
+          one of its two input terminals, either SET or RESET to be active at any one time 
+          under normal switching thereby eliminating the invalid condition seen previously 
+          in the SR flip flop circuit. <br> <br>
+
+          However, if both the J and K inputs are HIGH at logic “1” (J = K = 1), when the clock 
+          input goes HIGH, the circuit will “toggle” as its outputs switch and change state 
+          complementing each other. This results in the JK flip-flop acting more like a T-type 
+          toggle flip-flop when both terminals are “HIGH”. However, as the outputs are fed back 
+          to the inputs, this can cause the output at Q to oscillate between SET and RESET 
+          continuously after being complemented once. <br> <br>
+
+          While this JK flip-flop circuit is an improvement on the clocked SR flip-flop it also 
+          suffers from timing problems called “race” if the output Q changes state before the 
+          timing pulse of the clock input has time to go “OFF”. To avoid this the timing pulse 
+          period ( T ) must be kept as short as possible (high frequency). As this is sometimes 
+          not possible with basic JK flip-flops built using basic NAND or NOR gates, far more 
+          advanced master-slave (edge-triggered) flip-flops were developed which are more stable.
+        </p>
+
+        <h3>Master-Slave JK Flip-flop</h3>
+
+        <p>
+          The master-slave flip-flop eliminates all the timing problems by using two SR flip-flops 
+          connected together in a series configuration. One flip-flop acts as the “Master” circuit, 
+          which triggers on the leading edge of the clock pulse while the other acts as the “Slave” 
+          circuit, which triggers on the falling edge of the clock pulse. This results in the two 
+          sections, the master section and the slave section being enabled during opposite half-cycles 
+          of the clock signal. <br><br>
+
+          The TTL 74LS73 is a Dual JK flip-flop IC, which contains two individual JK type bistable’s 
+          within a single chip enabling single or master-slave toggle flip-flops to be made. Other JK 
+          flip flop IC’s include the 74LS107 Dual JK flip-flop with clear, the 74LS109 Dual positive-edge 
+          triggered JK flip flop and the 74LS112 Dual negative-edge triggered flip-flop with both preset 
+          and clear inputs.
+        </p>
+
+        <h3>Dual JK Flip-flop 74LS73</h3>
+
+        <div class="box_70"><img src="images/sequential-seq17.gif" alt="Stepper Motor"></div>
+        <div class="capt_cont">Fig: Half Adder Circuit</div>
+
+        <h3>Other Popular JK Flip-flop ICs</h3>
+
+        <div class="box_70"><img src="images/jkics.png" alt="Stepper Motor"></div>
+        <div class="capt_cont">Fig: Half Adder Circuit</div>
+
+
+
+        <p>
+          The Master-Slave Flip-Flop is basically two gated SR flip-flops connected together in a 
+          series configuration with the slave having an inverted clock pulse. The outputs from 
+          Q and Q from the “Slave” flip-flop are fed back to the inputs of the “Master” with the 
+          outputs of the “Master” flip flop being connected to the two inputs of the “Slave” flip 
+          flop. This feedback configuration from the slave’s output to the master’s input gives 
+          the characteristic toggle of the JK flip flop as shown below.
+        </p>
+
+        <h3>The Master-Slave JK Flip Flop</h3>
+        <p>
+          The input signals J and K are connected to the gated “master” SR flip flop which “locks” 
+          the input condition while the clock (Clk) input is “HIGH” at logic level “1”. As the clock 
+          input of the “slave” flip flop is the inverse (complement) of the “master” clock input, 
+          the “slave” SR flip flop does not toggle. The outputs from the “master” flip flop are 
+          only “seen” by the gated “slave” flip flop when the clock input goes “LOW” to logic level “0”. <br><br>
+
+          When the clock is “LOW”, the outputs from the “master” flip flop are latched and any 
+          additional changes to its inputs are ignored. The gated “slave” flip flop now responds to 
+          the state of its inputs passed over by the “master” section. <br><br>
+
+          Then on the “Low-to-High” transition of the clock pulse the inputs of the “master” flip flop 
+          are fed through to the gated inputs of the “slave” flip flop and on the “High-to-Low” transition 
+          the same inputs are reflected on the output of the “slave” making this type of flip flop edge 
+          or pulse-triggered. <br><br>
+
+          Then, the circuit accepts input data when the clock signal is “HIGH”, and passes the data to 
+          the output on the falling-edge of the clock signal. In other words, the Master-Slave JK Flip 
+          flop is a “Synchronous” device as it only passes data with the timing of the clock signal. <br><br>
+
+          In the next tutorial about Sequential Logic Circuits, we will look at Multivibrators that are 
+          used as waveform generators to produce the clock signals to switch sequential circuits.
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="link_cont">
+
+      <div class="vdo_lst_cont">
+        <h3>Lesson Video</h3>
+        <iframe width="186" height="130" src="https://www.youtube.com/embed/yqWX86uT5jM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div id="sidebar1"></div> 
+
+    </div>
+
+  </div>
+
+
+
+  <div class="exercise_section">
+    <h3>Tasks (Lab)</h3>
+      <div class="row">
+
+        <div class="col">
+          <div class="exercise_section_text">
+            <ul><h4>Task 1 :</h4>
+              <li>Design and implement a JK Flip-Flop using both 2-input and 3-input NAND gates and derive the characteristic table.</li>
+              <li><h4>Steps --</h4>
+                  <ol> 
+                    <li>Create the truth table.</li>
+                    <li>Draw the circuit diagram.</li>
+                    <li>Draw the timing diagram.</li>
+                    <li>Verify the results with the truth table.</li>
+                  </ol>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col"> <img src="images/JK-Flip-Flop.png" alt="JK_Nand"> </div>
+
+      </div> 
+    
+      <div class="row">
+
+        <div class="col">
+          <div class="exercise_section_text">
+            <ul><h4>Task 2 :</h4>
+              <li>Use IC 7476 (Dual JK flip-flop IC with PRESET and CLEAR) to construct a Master-Slave 
+                JK flip-flop and observe the states of the inputs, the intermediate and final outputs 
+                with the variation of clock pulse. You are advised to use a low frequency clock pulse 
+                and if needed, a manual pulse.</li>
+              <li>(Simulate the circuit on Proteus then implement the hardware on breadboard options and verify truth table.)</li>
+            </ul>
+  
+          </div>
+        </div>
+
+        <div class="col">
+          <img src="images/sequential-seq17.gif" alt="ckt_diagram">
+        </div>
+
+      </div>
+
+
+
+  </div>
+
+
+
+  <div class="exercise_section">
+    <h3>Tasks (Home)</h3>
+      <div class="row">
+
+        <div class="col">
+          <div class="exercise_section_text">
+            <ul><h4>Task 1 :</h4>
+              <li>A JN flip-flop has two inputs, J and N. Input J behaves like the J input of a JK 
+                flip-flop and input N behaves like the complement of the K input of a JK flip-flop 
+                (that is, N=K’).
+              </li>
+
+
+              <li>
+                <ul> Steps:
+                  <li>
+                    IC diagram with pin numbers showing the interconnection between different ICs.
+                  </li>
+                  <li>
+                    A succinct description giving a coherent justification of the different parts of the design.
+                  </li>
+                </ul>
+                               
+              </li>
+            </ul>
+
+            <p>
+              Hint: A 4 bit adder circuit can be created cascading 4 1-bit full adder circuits constructed 
+              only using basic gates (refer to Task 2).
+            </p>
+          </div>
+        </div>
+
+        <div class="col">
+          <img src="images/8bit_adder.png" alt="ckt_diagram">
+        </div>
+
+      </div> 
+
+  </div>
+
+  <div class="simulation_section">
+    <h3>Simulations</h3>
+      <div class="row">
+
+        <div class="col">
+          <div class="simulation_section_text">
+            <ul><h4>Proteus Simulation</h4>
+              <li>Draw the schematic on proteus and simulate</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col"> <img src="images/adder_proteus1.png" alt="ckt_diagram"> </div>
+
+      </div> 
+    
+      <div class="row">
+
+        <div class="col">
+          <div class="simulation_section_text">
+            <ul><h4>Tinkercad Simulation</h4>
+              <li>Simulate the circuit on Tinkercad then implement the hardware on breadboard options.</li>
+            </ul>
+  
+          </div>
+        </div>
+
+        <div class="col">
+          <img src="images/283_tcad.png" alt="ckt_diagram">
+        </div>
+
+      </div>
+
+  </div>
+  
+  <div id="icpin"></div>
+
+
+  <div class="tricks_section">
+    <h3>Tips and Tricks</h3>
+    <div class="tricks_sub_section"> <img src="images/74series_same_pinout.png" alt="samepinout_74xx"> </div>
+    <div class="tricks_sub_section"> <img src="images/jk_alternate.png" alt="JK_FF_ICs"> </div>
+    <div class="tricks_sub_section"> <img src="images/addsub1.png" alt="7400"> </div>
+  </div>
+
+
+
+
+</body>
+
+
+</html>
