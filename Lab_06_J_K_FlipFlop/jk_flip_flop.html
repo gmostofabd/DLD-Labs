@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="https://github.com/gmostofabd/melab-store/blob/main/Images/melab-bd_logo.jpg?raw=true" type="image/x-icon">
   
-    <script src="https://github.com/gmostofabd/melab-store/blob/main/sharedfooter.js" type="text/javascript" defer></script>
-  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     
     <script>  $(function(){$('#sidebar1').load("assets/sidebar1.html");});</script>
@@ -32,7 +30,7 @@
 <body>
 
   <div class="first_top_cont">
-    <a href="LAB_04_BINARY_ADDERS/Binary_Adder.html">Links</a>
+    <a href="LAB_04_BINARY_ADDERS/Binary_Adder.html">Home</a>
   </div>
 
 
@@ -74,19 +72,19 @@
 
           <div class="mySlides fade">
             <div class="numbertext">1 / 4</div>
-            <img src="images/half_adder_anim.gif" >
+            <img src="images/L6_slide1.png" >
             <div class="text">Theory</div>
           </div>
           
           <div class="mySlides fade">
             <div class="numbertext">2 / 4</div>
-            <img src="images/adder_proteus2.png" >
+            <img src="images/L6_slide2.png" >
             <div class="text">Simulation</div>
           </div>
           
           <div class="mySlides fade">
             <div class="numbertext">3 / 4</div>
-            <img src="images/slide4.png" >
+            <img src="images/L6_slide3.png" >
             <div class="text">Virtual</div>
           </div>
 
@@ -138,10 +136,8 @@
 
       <div class="section">
         <h3>APPARATUS</h3>
-        <div class="box_90"><img src="images/apparatus.png" alt="Stepper Motor"></div>
+        <div class="box_90"><img src="images/apparatus.png" alt="apparatus"></div>
         <div class="capt_cont">Fig: Common apparatus for DLD Labs</div>
- 
- 
  
         <ul>
             <li>Digital Trainer</li>
@@ -149,8 +145,9 @@
             <li>Jumper Wire (M2M or as required)</li>
             <li>Power Supply, Bread Board, Switches, Resistors, LEDs (When Digital Trainer Board is unavailable)</li>
             <li>Multimeter (Trouble Shoot purposes)</li>
-
+            <li>Proteus software on your pc</li>
           </ul>
+
       </div>
 
 
@@ -337,7 +334,7 @@
 
         <h3>Dual JK Flip-flop 74LS73</h3>
 
-        <div class="box_70"><img src="images/sequential-seq17.gif" alt="Stepper Motor"></div>
+        <div class="box_50"><img src="images/sequential-seq17.gif" alt="Stepper Motor"></div>
         <div class="capt_cont">Fig: Half Adder Circuit</div>
 
         <h3>Other Popular JK Flip-flop ICs</h3>
@@ -432,7 +429,7 @@
         <div class="col">
           <div class="exercise_section_text">
             <ul><h4>Task 2 :</h4>
-              <li>Use IC 7476 (Dual JK flip-flop IC with PRESET and CLEAR) to construct a Master-Slave 
+              <li>Use IC 7473 (Dual JK flip-flop IC with PRESET and CLEAR) to construct a Master-Slave 
                 JK flip-flop and observe the states of the inputs, the intermediate and final outputs 
                 with the variation of clock pulse. You are advised to use a low frequency clock pulse 
                 and if needed, a manual pulse.</li>
@@ -467,23 +464,16 @@
               </li>
 
 
-              <li>
-                <ul> Steps:
-                  <li>
-                    IC diagram with pin numbers showing the interconnection between different ICs.
-                  </li>
-                  <li>
-                    A succinct description giving a coherent justification of the different parts of the design.
-                  </li>
-                </ul>
-                               
+
+              <li><h4>Steps --</h4>
+                <ol> 
+                  <li>Tabulate the characteristic table of the flip-flop.</li>
+                  <li>Show that by connecting two inputs together, one obtains a D flip-flop.</li>
+                </ol>
               </li>
+
             </ul>
 
-            <p>
-              Hint: A 4 bit adder circuit can be created cascading 4 1-bit full adder circuits constructed 
-              only using basic gates (refer to Task 2).
-            </p>
           </div>
         </div>
 
@@ -507,7 +497,7 @@
           </div>
         </div>
 
-        <div class="col"> <img src="images/adder_proteus1.png" alt="ckt_diagram"> </div>
+        <div class="col"> <img src="images/7476_proteus.png" alt="ckt_diagram"> </div>
 
       </div> 
     
@@ -523,7 +513,7 @@
         </div>
 
         <div class="col">
-          <img src="images/283_tcad.png" alt="ckt_diagram">
+          <img src="images/nand_jk.png" alt="ckt_diagram">
         </div>
 
       </div>
@@ -535,9 +525,12 @@
 
   <div class="tricks_section">
     <h3>Tips and Tricks</h3>
-    <div class="tricks_sub_section"> <img src="images/74series_same_pinout.png" alt="samepinout_74xx"> </div>
+    <div class="tricks_sub_section"> <img src="images/L6_tips2.png" alt="JK_FF_ICs"> </div>
+    <div class="tricks_sub_section"> <img src="images/L6_tips1.png" alt="JK_FF_ICs"> </div>
     <div class="tricks_sub_section"> <img src="images/jk_alternate.png" alt="JK_FF_ICs"> </div>
-    <div class="tricks_sub_section"> <img src="images/addsub1.png" alt="7400"> </div>
+    <div class="tricks_sub_section"> <img src="images/jk_4027.png" alt="JK_FF_ICs"> </div>
+    <div class="tricks_sub_section"> <img src="images/jk_bcd_cntr.png" alt="JK_FF_ICs"> </div>
+    <div class="tricks_sub_section"> <img src="images/74series_same_pinout.png" alt="samepinout_74xx"> </div>
   </div>
 
 
