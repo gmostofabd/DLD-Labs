@@ -57,7 +57,7 @@
   </div>
 
 
-  <div id="topic_container"><h2>Lab 06 - Operation of Sequentialp Logic Circuits: The JK Flip-Flop.</h2></div>
+  <div id="topic_container"><h2>Lab 06 - Operation of Sequential Logic Circuits: The JK Flip-Flop.</h2></div>
   
 
   <div class="root_cont">
@@ -125,7 +125,7 @@
 
 
       <div class="section">
-        <h3>OBJECTIVE :</h3>
+        <h3>Objective</h3>
           <ul>
             <li>To understand and implement JK Flip-Flop using universal gates.</li>
             <li>To design and implement a Master-Slave JK Flip-Flop using JK Flip-Flop IC.</li>
@@ -135,18 +135,24 @@
 
 
       <div class="section">
-        <h3>APPARATUS</h3>
+        <h3>Apparatus</h3>
         <div class="box_90"><img src="images/apparatus.png" alt="apparatus"></div>
         <div class="capt_cont">Fig: Common apparatus for DLD Labs</div>
  
-        <ul>
+          <ul>
             <li>Digital Trainer</li>
-            <li>IC's (7400, 7410, 7476)</li>
+            <li>IC's (7400, 7410, 7473 or 7476)</li>
             <li>Jumper Wire (M2M or as required)</li>
+            <li>Oscilloscope (To investigate the wave shapes)</li>
             <li>Power Supply, Bread Board, Switches, Resistors, LEDs (When Digital Trainer Board is unavailable)</li>
             <li>Multimeter (Trouble Shoot purposes)</li>
             <li>Proteus software on your pc</li>
           </ul>
+
+        <div class="note_text">
+          Note: Out of a number of J-K Flip-Flop ICs, 7473 is more popular in virtual platforms. So, we 
+          will be using 7473 for both Proteus and Tinkercad.
+        </div>
 
       </div>
 
@@ -223,7 +229,59 @@
           the output will always be the same, either a “1” or a “0”, it is permanently set. 
           However, we can see how feedback works by examining the most basic sequential 
           logic components, called the SR flip-flop. <br><br>
+        </p>
 
+        <h3>Flip Flop and Latches</h3>
+
+        <p>
+          There are two types of memory elements based on the type of triggering that is 
+          suitable to operate it.
+        </p>
+
+        <ul>
+          <li>Latches</li>
+          <li>Flìp Flops</li>
+        </ul>
+
+        <p>
+          Latches operate with enable signal, which is level sensitive. Whereas, flip-flops 
+          are edge sensitive. <br><br>
+
+          For example, let us talk about SR latch and SR flip-flops. In this circuit when you 
+          Set S as active the output Q would be high and Q’ will be Low. This is irrespective 
+          of anything else. (This is an active-low circuit so active here means low, but for 
+          an active high circuit active would mean high)
+        </p>
+
+
+        <div class="box_50"><img src="images/RS-with-NAND-gates-1.png" alt="jkff"></div>
+
+        <p>
+          A flip-flop, on the other hand, is synchronous and is also known as a gated or clocked SR latch.
+        </p>
+        <div class="box_50"><img src="images/SR-flip-flop.png" alt="jkff"></div>
+
+        <p>
+          In this circuit diagram, the output is changed (i.e. the stored data is changed) only when 
+          you give an active clock signal. Otherwise, even if the S or R is active the data will not 
+          change. Let’s look at the types of flip-flops to understand better.
+        </p>
+
+        <h3>Types of Flip Flop</h3>
+
+        <p>
+          There are basically four different types of flip flops and these are:
+        </p>
+        
+        <ul>
+          <li>Set-Reset (SR) flip-flop</li>
+          <li>JK flip-flop.</li>
+          <li>D (Data or Delay) flip-flop.</li>
+          <li>T (Toggle) flip-flop.</li>
+        </ul>
+
+
+        <p>
           The basic S-R NAND flip-flop circuit has many advantages and uses in sequential 
           logic circuits but it suffers from two basic switching problems. <br><br>
 
@@ -233,6 +291,7 @@
 
           Then to overcome these two fundamental design problems with the SR flip-flop design, 
           the JK flip Flop was developed.
+
         </p>
 
 
@@ -374,9 +433,17 @@
           the output on the falling-edge of the clock signal. In other words, the Master-Slave JK Flip 
           flop is a “Synchronous” device as it only passes data with the timing of the clock signal. <br><br>
 
-          In the next tutorial about Sequential Logic Circuits, we will look at Multivibrators that are 
-          used as waveform generators to produce the clock signals to switch sequential circuits.
+          In the next tutorial about Sequential Logic Circuits, we will look at johnson Counter and 
+          Ring Counter circuits.
         </p>
+
+        <h3>Applications of Flip-Flops</h3>
+          <ul>
+            <li>Counters</li>
+            <li>Frequency Dividers</li>
+            <li>Shift Registers</li>
+            <li>Storage Registers</li>
+          </ul>
 
 
       </div>
@@ -520,7 +587,33 @@
 
   </div>
   
+
+
+
+
   <div id="icpin"></div>
+
+
+
+  <div class="simulation_section">
+    <h3>Videos May help you</h3>
+
+      <div class="row">
+          <div class="col">
+            <div class="vdo_lst_cont">
+              <iframe width="460" height="240" src="https://www.youtube.com/embed/Hi7rK0hZnfc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="vdo_lst_cont">
+              <iframe width="460" height="240" src="https://www.youtube.com/embed/rXHSB5w7CyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+      </div> 
+      
+  </div>
+
 
 
   <div class="tricks_section">
@@ -532,6 +625,7 @@
     <div class="tricks_sub_section"> <img src="images/jk_bcd_cntr.png" alt="JK_FF_ICs"> </div>
     <div class="tricks_sub_section"> <img src="images/74series_same_pinout.png" alt="samepinout_74xx"> </div>
   </div>
+
 
 
 
