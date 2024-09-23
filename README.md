@@ -68,6 +68,8 @@ Digital logic is the backbone of modern electronics. This repository is designed
 
 ---
 
+
+
 ## 🟠 **Combinational Circuits**
 
 This section covers combinational circuits, which depend only on the current inputs. **Half-Adders** and **Multiplexers** are key topics discussed here.
@@ -76,23 +78,69 @@ This section covers combinational circuits, which depend only on the current inp
 
 A **half-adder** adds two single-bit numbers and outputs a **sum** and a **carry**.
 
-| **Circuit Diagram**                           | **Truth Table**                                    |
-|-----------------------------------------------|----------------------------------------------------|
-| ![Half-Adder](path_to_half_adder_image)       | Input A | Input B | Sum | Carry <br> 0 | 0 | 0 | 0 <br> 0 | 1 | 1 | 0 <br> 1 | 0 | 1 | 0 <br> 1 | 1 | 0 | 1 |
+#### Circuit Diagram
+```
+      A ----|\
+             |  \
+             |   |---- Sum
+      B ----|   /
+                 |/
+                |---- Carry
+```
+
+#### Truth Table
+| Input A | Input B | Sum | Carry |
+|---------|---------|-----|-------|
+|    0    |    0    |  0  |   0   |
+|    0    |    1    |  1  |   0   |
+|    1    |    0    |  1  |   0   |
+|    1    |    1    |  0  |   1   |
 
 ### Keywords: Half-Adder, Sum, Carry
 
 ---
 
+
+
+
+### Keywords: Half-Adder, Sum, Carry
+
+---
+
+
 ## 🟡 **Sequential Circuits**
 
-Sequential circuits rely on **memory** and include devices such as flip-flops and counters. This section introduces **basic flip-flops**, which are the building blocks of memory elements in digital systems.
+Sequential circuits rely on **memory** and include devices such as flip-flops and counters. This section introduces **basic flip-flops**, which form the building blocks of memory elements in digital systems.
 
 ### D Flip-Flop
 
-| **Circuit Diagram**                           | **Truth Table**                                    |
-|-----------------------------------------------|----------------------------------------------------|
-| ![D Flip-Flop](path_to_d_flip_flop_image)     | Input D | Clock | Output Q <br> 0 | ↑ | 0 <br> 1 | ↑ | 1 |
+A **D flip-flop** captures the value of the input (D) on the rising edge of the clock signal and holds it until the next clock edge.
+
+#### Circuit Diagram
+```
+       D ----|>o----|\
+               |      |  \
+               |      |   |---- Q (Output)
+        Clock--|      |   |
+                      |   |
+                     ----  |
+                     |  |  |
+                     |__|__|
+                       |
+                       |
+                      Q' (Inverted Output)
+```
+
+#### Truth Table
+| Input D | Clock | Output Q |
+|---------|-------|----------|
+|    0    |   ↑   |    0     |
+|    1    |   ↑   |    1     |
+
+### Keywords: D Flip-Flop, Memory, Clock
+
+---
+
 
 ### Keywords: D Flip-Flop, Memory
 
@@ -168,11 +216,28 @@ By setting up your breadboard this way, you can easily explore how different gat
 
 ---
 
-## 🔵 **Boolean Algebra and Simplification**
+## 🟣 **Boolean Algebra and Simplification**
 
 Boolean algebra is the mathematical foundation for digital logic circuits. This section demonstrates how to simplify complex logic expressions using **Boolean identities** and **Karnaugh maps (K-maps)**.
 
 ### Karnaugh Map Example
 
-| **Karnaugh Map** | ![K-Map](path_to_kmap_image) |
-|------------------|------------------------------
+A **Karnaugh Map** is a visual tool for simplifying Boolean expressions. Here's an example for the expression \( A'B + AB' \).
+
+#### Karnaugh Map
+```
+      AB
+      00  01  11  10
+   +-----------------
+  0|  0   1   0   1   (A')
+  1|  0   0   1   0   (A)
+```
+
+#### Simplified Expression
+The simplified expression derived from the K-map is:
+\[ A'B + AB' \]
+
+### Keywords: Karnaugh Map, Simplification, Boolean Algebra
+
+---
+
