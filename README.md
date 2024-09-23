@@ -4,12 +4,15 @@ Welcome to the **Digital Logic Design** repository! This collection contains exp
 
 <div align="center">
 
-<img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/apparatus.png" alt="AT89C51 Dot Matrix Circuit" width="80%">
+
    
 <p align="center">
   <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7400.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7402.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7404.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7408.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7432.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7486.png" alt="AT89C51 Dot Matrix Circuit" width="30%">
 </p>
+<br/>
+<br/>
 
+<img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/apparatus.png" alt="AT89C51 Dot Matrix Circuit" width="80%">
 
 </div>
 
