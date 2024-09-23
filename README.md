@@ -17,6 +17,7 @@ Welcome to the **Digital Logic Design** repository! This collection contains exp
 9. [Boolean Algebra and Simplification](#boolean-algebra-and-simplification)
 10. [Getting Started](#getting-started)
 11. [License](#license)
+12. [Conclusion](#conclusion)
 
 ---
 
@@ -30,45 +31,57 @@ Digital logic is the backbone of modern electronics. This repository is designed
 
 ### Logic Gate Symbols & Truth Tables
 
-| **Gate**   | **Symbol**                        | **Truth Table**                                                |
-|------------|-----------------------------------|----------------------------------------------------------------|
-| **AND**    | 
-```
-      A ----|\
-             | AND |---- Output
-      B ----|/
-```
-| Input A | Input B | Output <br> 0 | 0 | 0 <br> 0 | 1 | 0 <br> 1 | 0 | 0 <br> 1 | 1 | 1 |
-| **OR**     | 
-```
-      A ----|\
-             | OR  |---- Output
-      B ----|/
-```
-| Input A | Input B | Output <br> 0 | 0 | 0 <br> 0 | 1 | 1 <br> 1 | 0 | 1 <br> 1 | 1 | 1 |
-| **NOT**    | 
-```
-      A ----|>o---- Output
-```
-| Input  | Output <br> 0 | 1 <br> 1 | 0                              |
+<div align="center">
 
-### Keywords: AND, OR, NOT, Truth Table
+| **Gate**   | **IC**   | **Symbol** | **Input A** | **Input B** | **Output** |
+|------------|----------|------------|-------------|-------------|------------|
+| **AND**    | 74HC08   | ![AND Gate](https://via.placeholder.com/40x40?text=AND) | 0           | 0           | 0          |
+|            |          |            | 0           | 1           | 0          |
+|            |          |            | 1           | 0           | 0          |
+|            |          |            | 1           | 1           | 1          |
+| **OR**     | 74HC32   | ![OR Gate](https://via.placeholder.com/40x40?text=OR) | 0           | 0           | 0          |
+|            |          |            | 0           | 1           | 1          |
+|            |          |            | 1           | 0           | 1          |
+|            |          |            | 1           | 1           | 1          |
+| **NAND**   | 74HC00   | ![NAND Gate](https://via.placeholder.com/40x40?text=NAND) | 0           | 0           | 1          |
+|            |          |            | 0           | 1           | 1          |
+|            |          |            | 1           | 0           | 1          |
+|            |          |            | 1           | 1           | 0          |
+| **NOR**    | 74HC02   | ![NOR Gate](https://via.placeholder.com/40x40?text=NOR) | 0           | 0           | 1          |
+|            |          |            | 0           | 1           | 0          |
+|            |          |            | 1           | 0           | 0          |
+|            |          |            | 1           | 1           | 0          |
+| **XOR**    | 74HC86   | ![XOR Gate](https://via.placeholder.com/40x40?text=XOR) | 0           | 0           | 0          |
+|            |          |            | 0           | 1           | 1          |
+|            |          |            | 1           | 0           | 1          |
+|            |          |            | 1           | 1           | 0          |
+| **XNOR**   | 74HC66   | ![XNOR Gate](https://via.placeholder.com/40x40?text=XNOR) | 0           | 0           | 1          |
+|            |          |            | 0           | 1           | 0          |
+|            |          |            | 1           | 0           | 0          |
+|            |          |            | 1           | 1           | 1          |
+
+</div>
 
 ---
 
 ## 🟡 **Universal Gates**
 
-| **Gate**   | **IC**        | **Truth Table**                                               |
-|------------|---------------|---------------------------------------------------------------|
-| **NAND**   | 74HC00        | A | B | A NAND B <br> 0 | 0 | 1 <br> 0 | 1 | 1 <br> 1 | 0 | 1 <br> 1 | 1 | 0 |
-| **NOR**    | 74HC02        | A | B | A NOR B <br> 0 | 0 | 1 <br> 0 | 1 | 0 <br> 1 | 0 | 0 <br> 1 | 1 | 0 |
-| **XOR**    | 74HC86        | A | B | A XOR B <br> 0 | 0 | 0 <br> 0 | 1 | 1 <br> 1 | 0 | 1 <br> 1 | 1 | 0 |
+<div align="center">
 
-### Keywords: NAND, NOR, XOR, Truth Table
+| **Gate**   | **IC**        | **Input A** | **Input B** | **Output** |
+|------------|---------------|-------------|-------------|------------|
+| **NAND**   | 74HC00       | 0           | 0           | 1          |
+|            |               | 0           | 1           | 1          |
+|            |               | 1           | 0           | 1          |
+|            |               | 1           | 1           | 0          |
+| **NOR**    | 74HC02       | 0           | 0           | 1          |
+|            |               | 0           | 1           | 0          |
+|            |               | 1           | 0           | 0          |
+|            |               | 1           | 1           | 0          |
+
+</div>
 
 ---
-
-
 
 ## 🟠 **Combinational Circuits**
 
@@ -80,33 +93,27 @@ A **half-adder** adds two single-bit numbers and outputs a **sum** and a **carry
 
 #### Circuit Diagram
 ```
-      A ----|\
-             |  \
-             |   |---- Sum
-      B ----|   /
-                 |/
-                |---- Carry
+          A ----|\
+                 |  \
+                 |   |---- Sum
+          B ----|   /
+                     |/
+                    |---- Carry
 ```
 
 #### Truth Table
-| Input A | Input B | Sum | Carry |
-|---------|---------|-----|-------|
-|    0    |    0    |  0  |   0   |
-|    0    |    1    |  1  |   0   |
-|    1    |    0    |  1  |   0   |
-|    1    |    1    |  0  |   1   |
+<div align="center">
 
-### Keywords: Half-Adder, Sum, Carry
+| **Input A** | **Input B** | **Sum** | **Carry** |
+|-------------|-------------|---------|-----------|
+|      0      |      0      |    0    |     0     |
+|      0      |      1      |    1    |     0     |
+|      1      |      0      |    1    |     0     |
+|      1      |      1      |    0    |     1     |
 
----
-
-
-
-
-### Keywords: Half-Adder, Sum, Carry
+</div>
 
 ---
-
 
 ## 🟡 **Sequential Circuits**
 
@@ -118,31 +125,28 @@ A **D flip-flop** captures the value of the input (D) on the rising edge of the 
 
 #### Circuit Diagram
 ```
-       D ----|>o----|\
-               |      |  \
-               |      |   |---- Q (Output)
-        Clock--|      |   |
-                      |   |
-                     ----  |
-                     |  |  |
-                     |__|__|
-                       |
-                       |
-                      Q' (Inverted Output)
+         D ----|>o----|\
+                 |      |  \
+                 |      |   |---- Q (Output)
+          Clock--|      |   |
+                        |   |
+                       ----  |
+                       |  |  |
+                       |__|__|
+                         |
+                         |
+                        Q' (Inverted Output)
 ```
 
 #### Truth Table
-| Input D | Clock | Output Q |
-|---------|-------|----------|
-|    0    |   ↑   |    0     |
-|    1    |   ↑   |    1     |
+<div align="center">
 
-### Keywords: D Flip-Flop, Memory, Clock
+| **Input D** | **Clock** | **Output Q** |
+|-------------|-----------|--------------|
+|      0      |     ↑     |      0       |
+|      1      |     ↑     |      1       |
 
----
-
-
-### Keywords: D Flip-Flop, Memory
+</div>
 
 ---
 
@@ -158,8 +162,6 @@ The **74HC** series is a family of **high-speed CMOS** logic ICs that operate on
 - **74HC86**: Quad 2-input **XOR** Gate IC.
 
 Each IC contains multiple gates (typically 4 or 6), making them convenient for building small circuits on breadboards.
-
-### Keywords: 74HC00, 74HC02, 74HC04, 74HC08, 74HC32, 74HC86
 
 ---
 
@@ -178,66 +180,66 @@ In this design, diodes and an NPN transistor are used. The diodes allow current 
 The OR gate can be made using two diodes, where the anodes are connected to the inputs, and the cathode goes to the output. If any input is HIGH, current will flow to the output.
 
 **Equivalent Circuit:**
-- Diodes D1 and D2 ensure that if either input is HIGH, the output will be HIGH.
+- Diodes D
 
-### 3. NOT Gate (Transistor Logic)
-A single NPN transistor can be used to create a NOT gate. When the input is HIGH, the transistor conducts, grounding the output to LOW.
+1 and D2 conduct if either input is HIGH, resulting in a HIGH output.
 
-**Equivalent Circuit:**
-- When input is HIGH, the transistor switches ON, creating a LOW output (inverted signal).
-
-These circuits illustrate how digital gates can be simplified into fundamental components, giving insights into their internal structure.
-
-### Keywords: Diodes, Transistors, Equivalent Circuit
+### 3. NOT Gate (Transistor)
+A transistor can function as a NOT gate, where the input is connected to the base. When the input is HIGH, the transistor conducts, pulling the output LOW.
 
 ---
 
-## 🟣 **Breadboard Setup and Requirements**
+## 🟡 **Breadboard Setup and Requirements**
 
-To investigate the behavior of these gates, you will need the following:
+To set up the experiments, you will need:
 
-### Basic Requirements:
-- **Breadboard**: Essential for prototyping circuits without soldering, allowing for quick and flexible assembly.
-- **Power Supply**: Typically, a 5V DC power supply to power the 74HC ICs.
-- **Jumper Wires**: For connecting ICs, power, and input/output signals on the breadboard.
-- **LEDs**: To visualize the outputs of the logic gates.
-- **Resistors**: To limit current to the LEDs and ensure proper logic levels.
-- **Switches**: For manually inputting HIGH or LOW signals into the gates.
+### **Components**
+- Breadboard
+- Power supply (5V)
+- ICs (e.g., 74HC00, 74HC08)
+- Resistors (typically 1kΩ)
+- Diodes (for equivalent circuits)
+- Connecting wires
 
-### Breadboard Layout:
-1. Place the **74HC IC** at the center of the breadboard.
-2. Connect **Vcc (pin 14)** and **GND (pin 7)** to power and ground, respectively.
-3. Use **push buttons** or switches for inputs (connected to the IC’s input pins).
-4. Attach **LEDs** to the outputs to display the results of the gate operations.
-
-By setting up your breadboard this way, you can easily explore how different gates work by observing the LEDs.
-
-### Keywords: Breadboard, Power Supply, Circuit Assembly
+### **Procedure**
+1. Insert the IC into the breadboard.
+2. Connect power and ground to the appropriate pins.
+3. Build the circuits according to the diagrams provided.
+4. Test the circuits using a multimeter or LEDs to visualize outputs.
 
 ---
 
-## 🟣 **Boolean Algebra and Simplification**
+## 🔵 **Boolean Algebra and Simplification**
 
-Boolean algebra is the mathematical foundation for digital logic circuits. This section demonstrates how to simplify complex logic expressions using **Boolean identities** and **Karnaugh maps (K-maps)**.
+Understanding **Boolean algebra** is crucial for optimizing digital circuits. It allows you to simplify complex logical expressions into simpler forms that require fewer gates, ultimately reducing cost and power consumption.
 
-### Karnaugh Map Example
+### Example
+For the expression:  
+\[ AB + A'C + BC \]
 
-A **Karnaugh Map** is a visual tool for simplifying Boolean expressions. Here's an example for the expression \( A'B + AB' \).
+You can apply rules like **distribution** and **absorption** to simplify it.
 
-#### Karnaugh Map
-```
-      AB
-      00  01  11  10
-   +-----------------
-  0|  0   1   0   1   (A')
-  1|  0   0   1   0   (A)
+---
+
+## 🚀 **Getting Started**
+
+Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/yourusername/digital-logic-design.git
 ```
 
-#### Simplified Expression
-The simplified expression derived from the K-map is:
-\[ A'B + AB' \]
-
-### Keywords: Karnaugh Map, Simplification, Boolean Algebra
+Navigate to the project directory and start your experiments!
 
 ---
+
+## 📝 **License**
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+
+## 🏁 **Conclusion**
+
+This repository aims to provide foundational knowledge and practical experience in digital logic design. By working with various logic gates and circuits, you can build a strong understanding of how digital systems function.
 
