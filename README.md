@@ -2,18 +2,18 @@
 
 Welcome to the **Digital Logic Design** repository! This collection contains experiments focusing on the basics of digital logic gates using common ICs, equivalent circuits, and practical implementation using a breadboard.
 
+
+---
+
 <div align="center">
-
-
-   
 <p align="center">
   <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7400.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7402.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7404.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7408.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7432.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7486.png" alt="AT89C51 Dot Matrix Circuit" width="30%">
 </p>
 <br/>
+
 <br/>
 
 <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/apparatus.png" alt="AT89C51 Dot Matrix Circuit" width="80%">
-
 </div>
 
 ---
@@ -21,20 +21,20 @@ Welcome to the **Digital Logic Design** repository! This collection contains exp
 
 ## 🌟 **Contents**
 
-1. [Introduction to Digital Logic](#introduction-to-digital-logic)
-2. [Basic Logic Gates](#basic-logic-gates)
-3. [Universal Gates](#universal-gates)
-4. [Combinational Circuits](#combinational-circuits)
+1. [Introduction to Digital Logic](#-introduction-to-digital-logic)
+2. [Basic Logic Gates](#-basic-logic-gates)
+3. [Universal Gates](#-universal-gates)
+4. [Combinational Circuits](#-combinational-circuits)
    - [Half-Adder](#half-adder)
-5. [Sequential Circuits](#sequential-circuits)
+5. [Sequential Circuits](#-sequential-circuits)
    - [D Flip-Flop](#d-flip-flop)
-6. [Common ICs: 74HC Series](#common-ics-74hc-series)
-7. [Equivalent Circuits for Basic Gates](#equivalent-circuits-for-basic-gates)
-8. [Breadboard Setup and Requirements](#breadboard-setup-and-requirements)
-9. [Boolean Algebra and Simplification](#boolean-algebra-and-simplification)
-10. [Getting Started](#getting-started)
-11. [License](#license)
-12. [Conclusion](#conclusion)
+6. [Common ICs: 74HC Series](#-common-ics-74hc-series)
+7. [Equivalent Circuits for Basic Gates](#-equivalent-circuits-for-basic-gates)
+8. [Breadboard Setup and Requirements](#-breadboard-setup-and-requirements)
+9. [Boolean Algebra and Simplification](#-boolean-algebra-and-simplification)
+10. [Getting Started](#-getting-started)
+11. [License](#-license)
+12. [Conclusion](#-conclusion)
 
 ---
 
