@@ -3,7 +3,7 @@
 Welcome to the **Digital Logic Design** repository! This collection contains experiments focusing on the basics of digital logic gates using 74 series ICs, equivalent circuits, and practical implementations using a breadboard.
 
 <p align="center">
- <img src="https://github.com/gmostofabd/Digital-Logic-Circuits-and-Designs/blob/59014edf8d62f03bd710c47af99c4aeaab06a83b/shared_assets/images/Logic%20Circuit%20Thumbnail_2.png" alt="Logic Gates" width="70%">
+ <img src="https://github.com/gmostofabd/Digital-Logic-Circuits-and-Designs/blob/59014edf8d62f03bd710c47af99c4aeaab06a83b/shared_assets/images/Logic%20Circuit%20Thumbnail_3.png" alt="Logic Gates" width="70%">
 </p>
 
 ---
