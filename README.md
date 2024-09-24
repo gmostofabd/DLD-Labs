@@ -238,7 +238,8 @@ The **74HC** series is a family of **high-speed CMOS** logic ICs that operate on
 ---
 
 ## 🟡 **Breadboard Setup and Requirements**
-
+   
+ <img src="https://github.com/gmostofabd/Digital-Logic-Circuits-and-Designs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/apparatus.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> 
 To set up the experiments, you will need:
 
 ### **Components**
@@ -279,8 +280,7 @@ git clone https://github.com/yourusername/digital-logic-design.git
   <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/74series_same_pinout.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> 
    
    <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/adder_ckt.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> 
-   
-   <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/adder_proteus1.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> 
+
    
   
 </p>
