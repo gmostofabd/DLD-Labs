@@ -1,6 +1,7 @@
 # 🟢 **Digital Logic Design: Basic Experiments**
 
 Welcome to the **Digital Logic Design** repository! This collection contains experiments focusing on the basics of digital logic gates using common ICs, equivalent circuits, and practical implementation using a breadboard.
+![Logic Circuit](https://github.com/user-attachments/assets/08ca6583-971a-4da3-be36-7a3aeebf28e2)
 
 
 ---
