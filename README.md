@@ -1,21 +1,10 @@
 # 🟢 **Digital Logic Design: Basic Experiments**
 
 Welcome to the **Digital Logic Design** repository! This collection contains experiments focusing on the basics of digital logic gates using common ICs, equivalent circuits, and practical implementation using a breadboard.
-![Logic Circuit](https://github.com/user-attachments/assets/08ca6583-971a-4da3-be36-7a3aeebf28e2)
 
-
----
-
-<div align="center">
 <p align="center">
-  <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7400.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7402.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7404.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7408.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7432.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7486.png" alt="AT89C51 Dot Matrix Circuit" width="30%">
+ <img src="https://github.com/user-attachments/assets/08ca6583-971a-4da3-be36-7a3aeebf28e2" alt="AT89C51 Dot Matrix Circuit" width="50%">
 </p>
-<br/>
-
-<br/>
-
-<img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/apparatus.png" alt="AT89C51 Dot Matrix Circuit" width="80%">
-</div>
 
 ---
 
@@ -170,6 +159,13 @@ A **D flip-flop** captures the value of the input (D) on the rising edge of the 
 
 ## 🟢 **Common ICs: 74HC Series**
 
+<div align="center">
+<p align="center">
+  <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7400.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7402.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7404.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7408.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7432.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7486.png" alt="AT89C51 Dot Matrix Circuit" width="30%">
+</p>
+</div>
+
+
 The **74HC** series is a family of **high-speed CMOS** logic ICs that operate on low power and have fast switching times. Below are some widely used ICs for implementing basic and universal gates:
 
 - **74HC00**: Quad 2-input **NAND** Gate IC.
@@ -208,6 +204,13 @@ A transistor can function as a NOT gate, where the input is connected to the bas
 ---
 
 ## 🟡 **Breadboard Setup and Requirements**
+<div align="center">
+
+<img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/apparatus.png" alt="AT89C51 Dot Matrix Circuit" width="80%">
+</div>
+
+---
+
 
 To set up the experiments, you will need:
 
