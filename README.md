@@ -217,6 +217,15 @@ Digital logic gates can be constructed using **diodes** and **transistors**, dem
 ---
 
 ## 🟢 **Common ICs: 74HC Series**
+<div align="center">
+
+
+   
+<p align="center">
+  <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7400.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7402.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7404.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7408.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7432.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/7486.png" alt="AT89C51 Dot Matrix Circuit" width="30%">
+</p>
+
+</div>
 
 The **74HC** series is a family of **high-speed CMOS** logic ICs that operate on low power and have fast switching times. Below are some widely used ICs for implementing basic and universal gates:
 
@@ -266,10 +275,15 @@ git clone https://github.com/yourusername/digital-logic-design.git
 
 ---
 
-## 📝 **License**
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
+<p align="center">
+  <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/74series_same_pinout.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> 
+   
+   <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/adder_ckt.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> 
+   
+   <img src="https://github.com/gmostofabd/DLD-Labs/blob/215c69e89e64c13edd98c043d76d2a2b52d5af83/Lab_04_Binary_Adders/images/adder_proteus1.png" alt="AT89C51 Dot Matrix Circuit" width="30%"> 
+   
+  
+</p>
 ---
 
 ## 🏁 **Conclusion**
